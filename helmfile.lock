@@ -1,0 +1,10 @@
+version: v0.115.0
+dependencies:
+- name: inlets-operator
+  repository: https://inlets.github.io/inlets-operator/
+  version: 0.7.6
+- name: traefik
+  repository: https://kubernetes-charts.storage.googleapis.com
+  version: 1.86.2
+digest: sha256:732a88ba4c2e3b2e79757fd3f59f71cca02fab0b964e6f308ad1177cc0ec333e
+generated: "2020-05-16T17:14:35.750816253-06:00"

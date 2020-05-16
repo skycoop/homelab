@@ -1,0 +1,2 @@
+creation_rules:
+- gcp_kms: projects/homelab-277422/locations/global/keyRings/sops/cryptoKeys/sops-key

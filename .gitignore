@@ -1,3 +1,5 @@
+secrets/*
+!secrets/*.enc.*
 
 # Created by https://www.gitignore.io/api/code,helm,linux,macos,windows
 # Edit at https://www.gitignore.io/?templates=code,helm,linux,macos,windows
