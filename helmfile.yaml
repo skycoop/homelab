@@ -3,6 +3,8 @@ repositories:
   url: https://kubernetes-charts.storage.googleapis.com
 - name: inlets
   url: https://inlets.github.io/inlets-operator/
+- name: bitnami
+  url: https://charts.bitnami.com/bitnami
 
 releases:
 - name: inlets
@@ -10,17 +12,22 @@ releases:
   chart: inlets/inlets-operator
   version: ~0.7.6
   values:
-  - provider: gce
-    projectID: homelab-277422
-    zone: us-central1-f
-    clientImage: inlets/inlets:2.7.0
+  - values/inlets.yaml
 
 - name: traefik
-  namespace: traefik
+  namespace: kube-system
   chart: stable/traefik
   version: ~1.86.2
   values:
-  - rbac:
-      enabled: true
+  - values/traefik.yaml
   needs:
   - inlets/inlets
+
+- name: external-dns
+  namespace: external-dns
+  chart: bitnami/external-dns
+  version: ~3.0.1
+  values:
+  - values/external-dns/values.yaml
+  secrets:
+  - values/external-dns/secrets.enc.yaml

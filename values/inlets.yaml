@@ -1,0 +1,5 @@
+clientImage: inlets/inlets:2.7.0
+
+provider: gce
+projectID: homelab-277422
+zone: us-central1-f

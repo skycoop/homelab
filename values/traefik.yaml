@@ -1,0 +1,10 @@
+rbac:
+  enabled: true
+
+service:
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: ingress.skycoop.dev
+
+kubernetes:
+  ingressEndpoint:
+    useDefaultPublishedService: true
