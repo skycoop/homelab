@@ -14,15 +14,6 @@ releases:
   values:
   - values/inlets.yaml
 
-- name: traefik
-  namespace: kube-system
-  chart: stable/traefik
-  version: ~1.86.2
-  values:
-  - values/traefik.yaml
-  needs:
-  - inlets/inlets
-
 - name: external-dns
   namespace: external-dns
   chart: bitnami/external-dns
@@ -31,3 +22,14 @@ releases:
   - values/external-dns/values.yaml
   secrets:
   - values/external-dns/secrets.enc.yaml
+
+- name: traefik
+  namespace: traefik
+  chart: stable/traefik
+  version: ~1.86.2
+  values:
+  - values/traefik.yaml
+  needs:
+  - inlets/inlets
+  - external-dns/external-dns
+  
