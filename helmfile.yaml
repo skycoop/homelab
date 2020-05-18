@@ -9,8 +9,8 @@ repositories:
 releases:
 - name: inlets
   namespace: inlets
-  chart: inlets/inlets-operator
-  version: ~0.7.6
+  chart: /home/cooper/projects/third_party/inlets-operator/chart/inlets-operator
+  # version: ~0.7.6
   values:
   - values/inlets.yaml
 
@@ -33,3 +33,5 @@ releases:
   - inlets/inlets
   - external-dns/external-dns
   
+- name: placeholder
+  chart: ./charts/placeholder
