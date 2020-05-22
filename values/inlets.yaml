@@ -1,4 +1,4 @@
-image: skycoop/inlets-operator:c5e36fe
+image: skycoop/inlets-operator:d1756c9
 clientImage: inlets/inlets:2.7.0
 
 provider: gce
