@@ -32,6 +32,3 @@ releases:
   needs:
   - inlets/inlets
   - external-dns/external-dns
-  
-- name: placeholder
-  chart: ./charts/placeholder
