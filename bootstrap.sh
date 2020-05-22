@@ -11,7 +11,6 @@ export NODE_2="192.168.86.15"
 k3sup install \
   --ip ${MASTER} \
   --user ${USER} \
-  --cluster \
   --k3s-version ${K3S_VERSION} \
   --no-extras \
   --context homelab \
